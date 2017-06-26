@@ -7,7 +7,7 @@ target 'API-Sandbox' do
   use_frameworks!
 
   # Pods for API-Sandbox
-  pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON.git'
+  pod pod 'SwiftyJSON', :git =>'https://github.com/SwiftyJSON/SwiftyJSON.git'
   pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git'
   pod 'AlamofireImage', :git => 'https://github.com/Alamofire/AlamofireImage.git'
   pod 'AlamofireNetworkActivityIndicator', :git => 'https://github.com/Alamofire/AlamofireNetworkActivityIndicator.git'

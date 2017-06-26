@@ -77,15 +77,14 @@ internal func exerciseTwo() {
     print("The top movie is \(topMovie.name) by \(topMovie.rightsOwner). It costs $\(topMovie.price) and was released on \(topMovie.releaseDate). You can view it on iTunes here: \(topMovie.link)")
 }
 
-internal func exerciseThree() {
+internal func exerciseThree() -> [Movie] {
     // This would normally be network calls that return `NSData`. We'll show you how to do those soon!
     // In this case, we are using a local JSON file.
     guard let jsonURL = Bundle.main.url(forResource: "iTunes-Movies", withExtension: "json") else {
         print("Could not find iTunes-Movies.json!")
-        return
+        return []
     }
     let jsonData = try! Data(contentsOf: jsonURL)
-    
     // Enter SwiftyJSON!
     // moviesData now contains a JSON object representing all the data in the JSON file.
     // This JSON file contains the same data as the tutorial example.
@@ -158,4 +157,5 @@ internal func exerciseThree() {
     for movie in _2016Movies {
         print("\(movie.name) released on \(movie.releaseDate)")
     }
+    return allMovies
 }
